@@ -21,7 +21,8 @@ $(document).ready(function () {
 	});
 
 	var DayCollection = Backbone.Collection.extend({
-		model : DayModel
+		model : DayModel,
+		url: "/events"
 	});
 
 	var DayCollectionView = Backbone.View.extend({
@@ -32,14 +33,14 @@ $(document).ready(function () {
 			var month = today.getMonth();
 
 			function daysInMonth(month, year) {
-				return new Date(year, month+1, 0).getDate();
+				return new Date(year, month + 1, 0).getDate();
 			}
 			console.log(daysInMonth(7, 2015));
 
-			var calTable = '<table border="1" style="width: 100%""><tr><td>butts</td></tr><tr></tr><tr></tr><tr></tr><tr></tr></table>'
+			var calTable = '<table border="1" style="width: 100%""><tr><td>butts</td></tr><tr></tr><tr></tr><tr></tr><tr></tr></table>';
 			this.$el.html(calTable);
 		},
-		initialize: function(){
+		initialize: function() {
 			this.calArr = [];
 		}
 	});

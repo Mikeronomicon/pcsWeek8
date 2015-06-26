@@ -6,6 +6,11 @@
     <script type="text/javascript" src="underscore.js"></script>
     <script type="text/javascript" src="backbone.js"></script>
     <script type="text/javascript" src="calendarServe.js"></script>
+    <script type="text/javascript">
+      var cal = new Calendar();
+      cal.generateHTML();
+      document.write(cal.getHTML());
+    </script>
   </head>
   <body>
     <div id="listdiv"></div>
